@@ -1,0 +1,6 @@
+<div class="list_control">
+  <div *ngFor="let item of Items">
+    <list-item [item]="item" (onSaveItem)="saveItem($event)" (onRemoveItem)="removeItem($event)"></list-item>
+  </div>
+
+</div>

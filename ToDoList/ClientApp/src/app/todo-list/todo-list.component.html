@@ -1,0 +1,10 @@
+<div class="todo-app-container">
+  <div class="row">
+    <div class="col-md-12">
+      <item-edit-control (onSave)="onAddNew($event)" [createItemControl]="true"></item-edit-control>
+    </div>
+  </div>
+  <div class="row">
+    <item-list [Items]="Items" (onRemoveItem)="onRemoveItem($event)" class="col-md-12"></item-list>
+  </div>
+</div>

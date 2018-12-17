@@ -1,0 +1,14 @@
+<div class="col col-md-12 col-sm-12 item">
+  <div class="form-inline form-group">
+    <div class="col-md-1 col-sm-1">
+      <input class="form-control  item_checkbox" type="checkbox" />
+    </div>
+    <div class="col-md-10 col-sm-10">
+      <span class="item_desc" [hidden]="_inEditMode" (click)="setEditMode(true)">{{item.name}}</span>
+      <item-edit-control [hidden]="!_inEditMode" (onCancel)="setEditMode(false)" (onSave)="saveItem()" [editItem]="item"></item-edit-control>
+    </div>
+    <div class="col-md-1 col-sm-1">
+      <button class="btn btn-danger" (click)="removeItem()">Remove</button>
+    </div>
+  </div>
+</div>

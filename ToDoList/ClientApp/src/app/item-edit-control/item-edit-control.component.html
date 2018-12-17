@@ -1,0 +1,12 @@
+  <div class="form-group edit_control">
+    <div class="col-md-10 col-sm-10">
+      <input #item_input class="form-control"
+             (keyup.enter)="saveItem()"
+             (keyup.esc)="cancelEdit()"
+             [(ngModel)]="itemName"
+             placeholder="Add your new task..." />
+    </div>
+    <div class="col-sm-2 col-md-2">
+      <button #save_btn class="btn btn-info" (click)="saveItem()">Save item</button>
+    </div>
+  </div>
